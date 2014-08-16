@@ -1,0 +1,179 @@
+<html>
+  <head>
+
+    <!-- LAYOUT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Baumans' rel='stylesheet' type='text/css' />
+
+    <style>
+      
+      header {
+      
+      }
+
+      header ul, 
+      header ul li {
+      float: right;
+      background-color: #EEE;
+      }
+      
+      div#slides img{
+      width: 100%;
+
+      }
+
+      nav ul
+      {
+      list-style:none;
+      }
+
+      nav ul li
+      {
+      display:block;
+      float:left;
+      padding:3px 15px;
+      }
+
+      nav header ul li a
+      {
+      font-family: 'Open Sans', sans-serif;
+      text-transform:uppercase;
+      transition: all .25s ease;
+      }
+
+      nav ul li a:hover
+      {
+      color:#E56038;
+      }
+
+
+      #slider_content1, 
+      #slider_content2, 
+      #slider_content3
+      {
+      line-height: 25px;
+      font-family: 'Open Sans', sans-serif;
+      width:350px;
+      position:absolute;
+      top:15%;
+      left:15%;
+      display:none;
+      z-index:11;
+      }
+      
+
+      div#services{
+      float:right;
+      
+      }
+
+      div#services section{
+      width:33%;
+      float:left;
+      background-color: blue;
+      }
+
+      div#services section *{
+      padding:3%;
+      font-family: 'Open Sans', sans-serif;
+      
+      }
+
+      
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div id="wrap">
+      
+      <div id="content">
+
+	<header> 
+	  <img style="width: 200px; margin: 10px; float:left;" src="img/citynix.png" /> 
+	  <nav>
+	    <ul style="float:right;">
+	      <li><a href="/index.html">Home</a></li>
+	      <li><a href="/services/index.html">Services</a></li>
+	      <li><a href="/about.html">About</a></li>
+	      <li><a href="/contact.html">Contact</a></li>
+	    </ul>
+
+	  </nav>
+	  <img style="width: 100%;" src="img/lines.png" />
+	  
+	</header>
+	<div id="slides">
+	  <!-- <article id="slider_content1"> -->
+	  <!--   This is the first text -->
+	  <!-- </article> -->
+          <img src="img/slide-3.jpg" alt="Some alt text">
+            <!-- <img src="img/slide-2.jpg" alt="Some alt text"> -->
+            <!-- <img src="img/slide-1.jpg" alt="Some alt text"> -->
+	</div>
+
+	<div id="gap">
+	  
+	</div>
+	
+	
+      </div>
+
+      <div id="services">
+	<section>
+	  <h3>Web Development</h3>
+	  <p>
+	    Enterprise Resource Planning
+	  </p>
+	  <p>
+	    Portal and portlets Server
+	  </p>
+	  <p>
+	    Content Management System
+	  </p>
+	</section>
+	<section>
+	  <h3>
+	    Linux Consulting
+	  </h3>
+	  <p>
+	    Whether you are looking for help with Redhat Enterprise linux 
+	    consulting, or looking to install Ubuntu for the first time, our 
+	    team can help.  With experience using a variety of linux distributions, 
+	    CityNix can help you or your company make the switch to linux or 
+	    help with any linux changes that might be necessary and provide you 
+	    the support to smooth over any transitions.  
+
+	  </p>
+	</section>
+
+	<section>
+	  <h3>
+	    Data Backup
+	  </h3>
+	  <p>
+	  </p>
+	</section>
+      </div>
+
+
+    </div>
+
+
+    <div>
+
+    </div>
+
+
+    <footer>
+      <p>Copyrights 2011-2012</p>
+      <jsp:include page="/WEB-INF/tags/social-media.jsp" /> </footer>
+
+
+
+  </body>
+
+</html>
+
+
+
