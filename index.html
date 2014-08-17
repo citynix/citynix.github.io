@@ -1,311 +1,330 @@
 <html>
-  <head>
+	<head>
+		<title> CityNix </title>
 
-    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans|Baumans" rel="stylesheet" type="text/css" />
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0 , user-scalable=no" />
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans|Baumans" rel="stylesheet" type="text/css" />
+		<style>
 
-    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0 , user-scalable=no" />
-    
-    <style>
+			div#wrap {
+				width: 960px;
+				align: center ;
+				margin-left: auto; 
+				margin-right: auto;
+			}
 
-      div#wrap , div#why-us {
-      width: 960px;
-      align: center ;
-      margin-left: auto; 
-      margin-right: auto;
-      }
-
-      header {
-      }
-
-      header h1 {
-      color: #E56038;
-      font-family: 'Baumans',cursive;
-      font-size: 55px;
-      margin: 35px 0 0;
-      }
-      
-      header ul, 
-      header ul li {
-      float: right;
-      background-color: #EEE;
-      }
-      
-      div#slides img{
-      width: 100%;
-      }
-
-      nav ul
-      {
-      list-style:none;
-      }
-
-      nav ul li
-      {
-      display:block;
-      float:left;
-      padding:3px 15px;
-      }
-
-      nav header ul li a
-      {
-      font-family: 'Open Sans', sans-serif;
-      text-transform:uppercase;
-      transition: all .25s ease;
-      }
-
-      nav ul li a:hover
-      {
-      color:#E56038;
-      }
-
-      article.service
-      {
-      float:left;
-      width:50%;
-      font-size:14px;
-      }
-
-      article.service img {
-      float: left;
-      height: 6% ;
-      width: 20% ;
-
-      }
-
-      article.service h3 ,
-      article.service p {
-      margin-left: 22%;
-      }
-
-      article.service h3{
-      font-size:18px;
-      padding: 10px;
-      }
-      
-      div#services
-      {
-      width:auto;
-      width:100%;
-      max-width:100%;
-      margin:0 auto;
-      }
-
-      footer
-      {
-      position:relative;
-      width:100%;
-      clear:both;
-      width:auto;
-      height:150px;
-      bottom: 0px;
-      background-color: #3366FF ;
-      background:#333333;
-      }
-
-      @media (max-width: 480px){
-      
-      div#wrap {
-      width: 500px;
-      }
-
-      div#services article {
-      float: left;
-      width: 100%;
-      background-color: red;
-      }
-      
-      footer {
-      font-size: 12px;
-      width:100%;
-      }
-      }
-
-      div#why-us article{
-      width: 49% ;
-      float: left;
-      }
-
-    </style>
-
-  </head>
-
-  <body>
-
-    <header> 
-      <h1 style="float:left;  margin: 5px;">
-	<font style="color:#E56038">CITY</font><font style="color: #3366FF">NIX</font>
-      </h1>
-      <!-- <img style="width: 200px; margin: 10px; float:left;" src="img/citynix.png" />  -->
-      <nav>
-	<ul style="float:right;">
-	  <li><a href="/index.html">Home</a></li>
-	  <li><a href="#sevices">Services</a></li>
-	  <li><a href="/about.html">About</a></li>
-	  <li><a href="#contact">Contact</a></li>
-	</ul>
-      </nav>
-      <img style="width: 100%;" src="img/lines.png" />
-    </header>
-
-    <div id="wrap" >
-      
-      <div id="services" style="border: 1px black solid; float:left; width:100%;">
-	<h2>Our Services</h2>
-	<article class="service">
-	  <img src="img/icons/reporting.png" />
-	  <h3>
-	    Business Intillengence and Reporting
-	  </h3>
-	  <p>
-	    You are looking to eliminate guess work, improve the effeciency, identify cross-selling and up-selling opportunities, get faster answers to your business questions ?
-	    Yes? Then you are in right place.
-	  </p>
-	</article>	
-	<article class="service">
-	  <img src="img/icons/Folder-Searches.png" />
-	  <h3>
-	    Content Search Engines
-	  </h3>
-	  <p>
-	    Locating the peice of information in your huge amount of digital asset is getting harder ? 
-	    Is your training material are easy to find ... ? 
-	    We have a solution for you. 
-	  </p>
-	</article>
-
-	<article class="service">
-	  <img src="img/icons/PDF.png" />
-	  <h3>
-	    Publishing
-	  </h3>
-	  <p>
-	    You have data in specific format, and you want it produced in a different format ?? May be multi channel ?? 
-	  </p>
-	</article>
-
-	<article class="service">
-	  <img src="img/icons/Calculater.png"  />
-	  <h3>
-	    Enterprise Resource Planning (Coming Soon)
-	  </h3>
-	  <p>
-	  </p>
-	</article>	
-
-	<article class="service">
-	  <img src="img/icons/linux.png" />
-	  <h3>
-	    Linux Consulting
-	  </h3>
-	  <p>
-	    Whether you are looking for help with Redhat Enterprise linux 
-	    consulting, or looking to install Ubuntu for the first time, our 
-	    team can help.  With experience using a variety of linux distributions, 
-	    CityNix can help you or your company make the switch to linux or 
-	    help with any linux changes that might be necessary and provide you 
-	    the support to smooth over any transitions.  
-	  </p>
-	</article>
-
-	<article class="service">
-	  <img src="img/icons/data_protection.png" />
-	  <h3>Data Backup (coming soon) </h3>
-	  <p>
-	    This is the text for back up services
-	  </p>
-	</article>
-      </div>
+			header { }
 
 
-      <div id="why-us">
-	<h2> Why us </h2>
-	<article>
-	  <p>
-	    We talk support only, we don't ask countless questions. We use our expereince to offer a solution and recommend ways to help you getting what you want, done.
-	  </p>
-	</article>
-	<article>
-	  <p>
-	    We deliver on time. We hire only project managers with military background, so we know what a deadline really means.
-	  </p>
-	</article>
-	<article>
-	  <p>
-	    Competitive prices, with un matched quality.
-	  </p>	
-	</article>
-      </div>    
+			body  section {
+				width: 100%;
+				align: center ;
+				margin-left: auto; 
+				margin-right: auto;
+				margin: 20px auto; 
+				float: left;
+			}
 
-      <div class="opensource-products" style="float:left; width:100%;" >
-	<p>
-	  We use the best and most reliable technologies in our products
-	</p>
-	<ul>
-	  <a href="http://tomcat.apache.org">
-	    <img src="http://tomcat.apache.org/images/tomcat.png" />
-	  </a>
-	  <a href="http://lucene.apache.org/solr/">
-	    <img src="http://lucene.apache.org/images/solr.png" />
-	  </a>
-	  <a href="http://spring.io">
-	    <img src="img/Spring_Framework_logo.png" />
-	  </a>
-	  <a href="http://portals.apache.org">
-	    <img src="http://portals.apache.org/images/apache-portals.gif" />
-	  </a>
-	  <a href="http://www.eclipse.org/birt/">
-	    <img src="http://www.eclipse.org/birt/img/logo/Birt-logo.png" />
-	  </a>
+			div.row {
+				border: 1px black dashed;
+				margin-bottom: 15px;
+				float: left;
+			}
 
-	</ul>
-      </div>
-    </div>      
+			body  section div.row  article {
+				float:left;
+				width:47.4999%;
+				font-size:14px;
+			}
 
-    
-      <section>
-	CityNix
-	<br />
-	2446 Bank Street
-	<br />
-	Suite # 642
-	<br />
-	Ottawa, Ontario, K1V 1A8
-	<br />
-	Canada
-	<br />
-	Phone: 613-793-5225
-	<br />
-      </section>
-      <section>
-	<form action="http://getsimpleform.com/messages?form_api_token=d0464946b37d17df490212667452dbbe" method="post">
+			body  section div.row  article:first-child {
+				background-color: red;
+				margin-right: 5%;
+			}
 
-	  <input type="hidden" name="redirect_to" value="http://citynix.com" />
-	  <!-- all your input fields here.... -->
+			body  section div.row  article div{
+				width: 90%;
+				float: right;
+			}
 
-	  <label for="name">Name:</label>
-	  <input type="text" name="name" />
+			body  section div.row  article h3 {
+				font-size: 16px;
+				font-family : courier;
+				font-weight: bold;
+			}
 
-	  <label for="name">Email:</label>
-	  <input type="text" name="reply_email" />
+			body  section  h2{
+				margin : 10 px 0 px;
+				background-color: red;
+				font-size: 16px;
+				font-weight: bold;
+			}
 
-	  <label for="name">Message:</label>
-	  <textarea name="message"></textarea>
+			header h1 {
+				color: #E56038;
+				font-family: 'Baumans',cursive;
+				font-size: 55px;
+				margin: 35px 0 0;
+			}
+
+			header ul, header ul li {
+				float: right;
+				background-color: #EEE;
+			}
+
+			nav ul {
+				list-style:none;
+			}
+
+			nav ul li {
+				display:block;
+				float:left;
+				padding:3px 15px;
+			}
+
+			nav header ul li a {
+				font-family: 'Open Sans', sans-serif;
+				text-transform:uppercase;
+				transition: all .25s ease;
+			}
+
+			nav ul li a:hover {
+				color:#E56038;
+			}
+
+			img.icon  {
+				float: left;
+				max-height: 6% ;
+				max-width: 6% ;
+			}
+
+			footer {
+				position:relative;
+				width:100%;
+				clear:both;
+				width:auto;
+				height:150px;
+				bottom: 0px;
+				background-color: #3366FF ;
+				background:#333333;
+			}
+
+			#opensource p {
+				padding: 10px;
+				background-color: red;
 
 
-	  <input type="submit" value="Submit" />
-	</form>
-	</section>
-    </div>
+			}
+
+			#opensource div a img {
+				width: 18%;
+			}
 
 
-    <footer>
-      <p>Copyrights 2011-2012</p>
-    </footer>
+			form#contact-form {
+				background-color: green;
+				width: 100% ;
+				vertical-align: top;
+			}
+
+			form#contact-form label {
+				width: 650 px ;
+				font-weight: bold ;
+				background-color: gray ;
+				text-align: top ;
+			}
+
+		</style>
+
+	</head>
+
+	<body id="top">
+
+		<header> 
+			<h1 style="float:left;  margin: 5px;">
+				<font style="color:#E56038">CITY</font><font style="color: #3366FF">NIX</font>
+			</h1>
+			<!-- <img style="width: 200px; margin: 10px; float:left;" src="img/citynix.png" />  -->
+			<nav>
+				<ul style="float:right;">
+					<li><a href="#top">Home</a></li>
+					<li><a href="#sevices">Services</a></li>
+					<li><a href="#why-us">Why Us</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<img style="width: 100%;" src="img/lines.png" />
+		</header>
+
+		<div id="wrap" >
+			<section id="services">
+				<h2>Our Services</h2>
+				<div class="row">
+					<article>
+						<img class="icon" src="img/icons/reporting.png" />
+						<div>
+							<h3>BI Reports</h3>
+							<p>
+								You are looking to eliminate guess work, improve the effeciency, identify cross-selling and up-selling opportunities, get faster answers to your business questions ?
+								Yes? Then you are in right place.
+							</p>
+						</div>
+					</article>	
+
+					<article class="service">
+						<img class="icon" src="img/icons/Folder-Searches.png" />
+						<div>
+							<h3>Content Search Engines</h3>
+							<p>
+								Locating the peice of information in your huge amount of digital asset is getting harder ? 
+								Is your training material are easy to find ... ? 
+								We have a solution for you. 
+							</p>
+						</div>
+					</article>
+				</div>
+				<div class="row">
+					<article> 
+						<img class="icon" src="img/icons/PDF.png" />
+						<div>
+							<h3>Publishing</h3>
+							<p>
+								You have data in specific format, and you want it produced in a different format ?? May be multi channel ?? 
+							</p>
+						</div>
+					</article>
+
+					<article class="service">
+						<img class="icon" src="img/icons/Calculater.png"  />
+						<div>
+						<h3>Enterprise Resource Planning (Coming Soon)</h3>
+						<p>
+						</p>
+					</div>
+					</article>	
+
+				</div>
+
+				<div class="row">
+					<article class="service">
+						<img class="icon" src="img/icons/linux.png" />
+						<div>
+						<h3>
+							Linux Consulting
+						</h3>
+						<p>
+							Whether you are looking for help with Redhat Enterprise linux 
+							consulting, or looking to install Ubuntu for the first time, our 
+							team can help.  With experience using a variety of linux distributions, 
+							CityNix can help you or your company make the switch to linux or 
+							help with any linux changes that might be necessary and provide you 
+							the support to smooth over any transitions.  
+						</p>
+					</div>
+					</article>
+
+					<article class="service">
+						<img class="icon" src="img/icons/data_protection.png" />
+						<div>
+						<h3>Data Backup (coming soon) </h3>
+						<p>
+							This is the text for back up services
+						</p>
+					</div>
+					</article>
+				</div>
+			</section>
 
 
-  </body>
+			<section id="why-us">
+				<h2> Why us </h2>
+				<article>
+					<p>
+						We talk support only, we don't ask countless questions. We use our expereince to offer a solution and recommend ways to help you getting what you want, done.
+					</p>
+				</article>
+				<article>
+					<p>
+						We deliver on time. We hire only project managers with military background, so we know what a deadline really means.
+					</p>
+				</article>
+				<article>
+					<p>
+						Competitive prices, with un matched quality.
+					</p>	
+				</article>
+			</section>    
+
+			<section id="opensource">
+				<p>
+					We use the best and most reliable technologies in our products
+				</p>
+				<div>
+					<a href="http://tomcat.apache.org">
+						<img src="img/tomcat.png" />
+					</a>
+					<a href="http://lucene.apache.org/solr/">
+						<img src="img/solr.png" />
+					</a>
+					<a href="http://spring.io">
+						<img src="img/springframework_logo.png" />
+					</a>
+					<a href="http://portals.apache.org">
+						<img src="img/apache-portals.gif" />
+					</a>
+					<a href="http://www.eclipse.org/birt/">
+						<img src="img/birt-logo.png" />
+					</a>
+				</div>
+
+			</section>      
+
+			<section id="contact-us">
+				<div >
+					CityNix
+					<br />
+					2446 Bank Street
+					<br />
+					Suite # 642
+					<br />
+					Ottawa, Ontario, K1V 1A8
+					<br />
+					Canada
+					<br />
+					Phone: 613-793-5225
+					<br />
+				</div>
+
+				<form id="contact-form" action="http://getsimpleform.com/messages?form_api_token=d0464946b37d17df490212667452dbbe" method="post">
+
+					<input type="hidden" name="redirect_to" value="http://citynix.com" />
+
+					<label for="name">Name:</label>
+					<input type="text" name="name" placeholder=""  />
+					<br />
+
+					<label for="name">Email:</label>
+					<input type="text" name="reply_email" />
+					<br />
+
+					<label for="name">Message:</label>
+					<textarea name="message"></textarea>
+					<br />
+
+					<input type="submit" value="Submit" />
+				</form>
+			</section>
+		</div>
+
+
+		<footer>
+			<p>Copyrights 2011-2012</p>
+		</footer>
+
+
+	</body>
 </html>
 
 
