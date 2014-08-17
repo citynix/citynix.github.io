@@ -6,6 +6,20 @@
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans|Baumans" rel="stylesheet" type="text/css" />
 		<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0 , user-scalable=no" />
 
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script>
+			function initialize() {
+				var map_canvas = document.getElementById('map_canvas');
+				var map_options = {
+					center: new google.maps.LatLng(44.5403, -78.5463),
+					zoom: 8,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
+				var map = new google.maps.Map(map_canvas, map_options)
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+
 		<style>
 
 			div#wrap {
@@ -17,7 +31,6 @@
 
 			header { }
 
-
 			body  section {
 				width: 100%;
 				align: center ;
@@ -28,7 +41,6 @@
 			}
 
 			div.row {
-				border: 1px black dashed;
 				margin-bottom: 15px;
 				float: left;
 			}
@@ -40,7 +52,6 @@
 			}
 
 			body  section div.row  article:first-child {
-				background-color: red;
 				margin-right: 5%;
 			}
 
@@ -51,15 +62,14 @@
 
 			body  section div.row  article h3 {
 				font-size: 16px;
-				font-family : courier;
 				font-weight: bold;
 			}
 
 			body  section  h2{
-				margin : 10 px 0 px;
-				background-color: red;
+				margin : 10px 0px;
 				font-size: 16px;
 				font-weight: bold;
+
 			}
 
 			header h1 {
@@ -113,29 +123,33 @@
 
 			#opensource p {
 				padding: 10px;
-				background-color: red;
-
-
 			}
 
 			#opensource div a img {
 				width: 18%;
 			}
 
-
-			form#contact-form {
-				background-color: green;
+			form#contact {
 				width: 100% ;
-				vertical-align: top;
 			}
 
-			form#contact-form label {
-				width: 650 px ;
+			form#contact label {
+				width: 25%; 
+				display: inline-block;
 				font-weight: bold ;
-				background-color: gray ;
-				text-align: top ;
+				float:left ;
 			}
 
+			form#contact input[type="text"]{
+				width: 35%; 
+				display: inline-block;
+			}
+
+			div#map_canvas {
+				width: 400px;
+				height: 350px;
+			}
+	
 		</style>
 
 	</head>
@@ -282,7 +296,7 @@
 			</section>      
 
 			<section id="contact-us">
-				<div >
+				<div style="margin:20px 0px;" >
 					CityNix
 					<br />
 					2446 Bank Street
@@ -297,11 +311,13 @@
 					<br />
 				</div>
 
-				<form id="contact-form" action="http://getsimpleform.com/messages?form_api_token=d0464946b37d17df490212667452dbbe" method="post">
+				    <div id="map_canvas"></div>
+
+				<form id="contact" action="http://getsimpleform.com/messages?form_api_token=d0464946b37d17df490212667452dbbe" method="post">
 
 					<input type="hidden" name="redirect_to" value="http://citynix.com" />
 
-					<label for="name">Name:</label>
+					<label for="name" >Name:</label>
 					<input type="text" name="name" placeholder=""  />
 					<br />
 
@@ -310,7 +326,7 @@
 					<br />
 
 					<label for="name">Message:</label>
-					<textarea name="message"></textarea>
+					<textarea name="message" style="width: 35%; height:6em;" ></textarea>
 					<br />
 
 					<input type="submit" value="Submit" />
@@ -326,6 +342,5 @@
 
 	</body>
 </html>
-
 
 
