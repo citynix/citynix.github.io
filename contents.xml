@@ -25,30 +25,6 @@
     </p>
 
   </about>
-  <services>
-    <service name="backup" page="/services/backup.jsp">
-      <title>Backup Services</title>
-      <intro>
-	<p>
-	  Your most important asset - your corporate data - is far too valuable
-	  to entrust to cumbersome tape processes, unreliable backup media, and
-	  painstakingly slow recoveries. Small and medium-sized businesses
-	  (SMBs) are rapidly turning to online backup and recovery to displace
-
-	</p>
-      </intro>
-
-      <description>
-	Your most important asset - your corporate data - is far too valuable
-	to entrust to cumbersome tape processes, unreliable backup media, and
-	painstakingly slow recoveries. Small and medium-sized businesses
-	(SMBs) are rapidly turning to online backup and recovery to displace
-
-
-      </description>
-    </service>
-  </services>
-  <sections>
     <section>
       <title>ERP</title>
 

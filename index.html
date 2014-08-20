@@ -4,15 +4,17 @@
 
 		<link href="css/reset.css" rel="stylesheet" type="text/css" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans|Baumans" rel="stylesheet" type="text/css" />
+		<link href="slick/slick.css" rel="stylesheet" />
+
 		<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0 , user-scalable=no" />
 
-		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script src="js/gmaps.js"></script>
 		<script>
 			function initialize() {
 				var map_canvas = document.getElementById('map_canvas');
 				var map_options = {
-					center: new google.maps.LatLng(44.5403, -78.5463),
-					zoom: 8,
+					center: new google.maps.LatLng( 45.35263, -75.64687) ,
+					zoom: 14,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				}
 				var map = new google.maps.Map(map_canvas, map_options)
@@ -20,20 +22,39 @@
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
 
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="slick/slick.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready( function(){
+					$('div#thirdparty').slick( {
+						    arrows: true,
+						    infinite: true,
+						    slidesToShow: 5,
+						    slidesToScroll: 1,
+						    autoplay: true,
+						    autoplaySpeed: 2500, 
+						    }
+						);
+					});
+		</script>
+
 		<style>
+
+			body {
+				background-color:;
+			}
 
 			div#wrap {
 				width: 960px;
-				align: center ;
 				margin-left: auto; 
 				margin-right: auto;
+				font-family: 'Open Sans', sans-serif;
 			}
 
 			header { }
 
 			body  section {
 				width: 100%;
-				align: center ;
 				margin-left: auto; 
 				margin-right: auto;
 				margin: 20px auto; 
@@ -43,38 +64,49 @@
 			div.row {
 				margin-bottom: 15px;
 				float: left;
+				width:100%;
+				margin: 0px 0px 5% 0px;
 			}
 
 			body  section div.row  article {
-				float:left;
-				width:47.4999%;
-				font-size:14px;
+				float: left;
+				width: 47.4999%;
+				font-size: 14px;
 			}
 
-			body  section div.row  article:first-child {
+			body section div.row  article:first-child {
 				margin-right: 5%;
 			}
 
-			body  section div.row  article div{
-				width: 90%;
+			body section div.row  article div{
+				width: 89.99%;
 				float: right;
 			}
 
-			body  section div.row  article h3 {
-				font-size: 16px;
-				font-weight: bold;
+
+			body section div.row  article div h3.coming-soon {
+				height: 50px ;
+				background: url("img/coming-soon.jpg") right no-repeat;
+				background-size: 50px ;
 			}
 
-			body  section  h2{
-				margin : 10px 0px;
+			body section div.row  article div h3 {
+				height: 30px ;
 				font-size: 16px;
 				font-weight: bold;
+				width: 100% ;
+				float: left;
+			}
 
+			body section  h2 {
+				margin : 10px 0px;
+				font-size: 18px;
+				font-weight: bold;
 			}
 
 			header h1 {
 				color: #E56038;
-				font-family: 'Baumans',cursive;
+				font-family: 'Baumans', cursive;
 				font-size: 55px;
 				margin: 35px 0 0;
 			}
@@ -82,6 +114,7 @@
 			header ul, header ul li {
 				float: right;
 				background-color: #EEE;
+				vertical-align: bottom;
 			}
 
 			nav ul {
@@ -106,8 +139,8 @@
 
 			img.icon  {
 				float: left;
-				max-height: 6% ;
-				max-width: 6% ;
+				max-width: 8% ;
+				
 			}
 
 			footer {
@@ -125,8 +158,27 @@
 				padding: 10px;
 			}
 
-			#opensource div a img {
-				width: 18%;
+			div#thirdparty {
+				margin: 20px 0px;
+			}
+
+			div#thirdparty div {
+				height: 150px; 
+				text-align: bottom;
+			}
+
+			div#thirdparty div a {
+				text-align: bottom;
+				text-decoration:none;
+			}
+
+			div#thirdparty div a img {
+				position: absolute;
+				bottom: 0px;
+				text-align: bottom;
+				height: auto;
+				max-width: 150px; 
+				float: left;
 			}
 
 			form#contact {
@@ -146,13 +198,26 @@
 			}
 
 			div#map_canvas {
-				width: 400px;
-				height: 350px;
+				width: 40%;
+				height: 40%;
 			}
-	
-		</style>
 
-	</head>
+			.slick-prev:before , .slick-next:before {
+				color: orange; 
+			}
+
+
+			@media (max-width: 400px) {
+			
+			section div.row  article {
+				width: 99.99% ;
+				display: block ;
+
+			}
+		}
+
+	</style>
+</head>
 
 	<body id="top">
 
@@ -210,44 +275,64 @@
 						</div>
 					</article>
 
-					<article class="service">
-						<img class="icon" src="img/icons/Calculater.png"  />
+
+					<article>
+						<img class="icon" src="img/icons/linux.png" />
 						<div>
-						<h3>Enterprise Resource Planning (Coming Soon)</h3>
+						<h3>Linux Consulting</h3>
 						<p>
+							Whether you are looking for help with Redhat Enterprise linux consulting, or looking to install Ubuntu for the first time, our 
+							team can help.  With experience using a variety of linux distributions, CityNix can help you or your company make the switch to linux or 
+							help with any linux changes that might be necessary and provide you the support to smooth over any transitions.  
 						</p>
 					</div>
-					</article>	
+					</article>
 
 				</div>
 
-				<div class="row">
-					<article class="service">
-						<img class="icon" src="img/icons/linux.png" />
-						<div>
-						<h3>
-							Linux Consulting
-						</h3>
-						<p>
-							Whether you are looking for help with Redhat Enterprise linux 
-							consulting, or looking to install Ubuntu for the first time, our 
-							team can help.  With experience using a variety of linux distributions, 
-							CityNix can help you or your company make the switch to linux or 
-							help with any linux changes that might be necessary and provide you 
-							the support to smooth over any transitions.  
-						</p>
-					</div>
-					</article>
+				<div class="row" >
 
-					<article class="service">
+					<article>
+						<img class="icon" src="img/icons/Calculater.png"  />
+						<div>
+							<h3 class="coming-soon">Enterprise Resource Planning</h3>
+							<p>
+							You need complete visibility of your orginazation. Automatic workflow. E-commerce integration. Better collaboration.
+
+								
+
+							</p>
+						</div>
+					</article>	
+					<article>
 						<img class="icon" src="img/icons/data_protection.png" />
 						<div>
-						<h3>Data Backup (coming soon) </h3>
-						<p>
-							This is the text for back up services
-						</p>
-					</div>
-					</article>
+							<h3 class="coming-soon">Data Backup</h3>
+							<p>
+							Your most important asset - your corporate data - is far too valuable
+							to entrust to cumbersome tape processes, unreliable backup media, and
+							painstakingly slow recoveries. Small and medium-sized businesses
+							(SMBs) are rapidly turning to online backup and recovery to displace
+							older, manual, less reliable tape backup. In fact, a staggering 76.5%
+							of IT professionals plan to change the way they do backup over the
+							next 18 months. 
+							</p>
+							<p>
+							Online backup promises to address the challenges posed by traditional
+							tape backup solutions. This white paper explores why today's SMBs use
+							online backup and recovery to protect their SQL database, Exchange,
+							application and file servers. Learn the top ten reasons why SMBs are
+							embracing online backup and recovery to protect server data including
+							automatic, continuous data protection (CDP), secure offsite storage,
+							and data encryption for reliable server backup and disaster recovery.
+							<a class="readmore" 
+								href="http://www.techrepublic.com/whitepapers/top-10-reasons-why-online-backup-is-replacing-tape/162691">
+								Read More: Top 10 Reasons Why Online Backup Is Replacing Tape
+							</a> 
+							</p>
+
+						</div>
+						</article>
 				</div>
 			</section>
 
@@ -256,7 +341,7 @@
 				<h2> Why us </h2>
 				<article>
 					<p>
-						We talk support only, we don't ask countless questions. We use our expereince to offer a solution and recommend ways to help you getting what you want, done.
+						We talk support only, we don't ask countless questions. We use our expereince to propose and recommend solutions.
 					</p>
 				</article>
 				<article>
@@ -269,49 +354,94 @@
 						Competitive prices, with un matched quality.
 					</p>	
 				</article>
-			</section>    
+				<article>
 
-			<section id="opensource">
+
 				<p>
-					We use the best and most reliable technologies in our products
+					We utilize and support the most reliable technologies in our products. This gives our clients the freedom to choose their software provider. 
+					Our clients will be given the source code under the business friendly ASL. 
 				</p>
-				<div>
-					<a href="http://tomcat.apache.org">
-						<img src="img/tomcat.png" />
-					</a>
-					<a href="http://lucene.apache.org/solr/">
-						<img src="img/solr.png" />
-					</a>
-					<a href="http://spring.io">
-						<img src="img/springframework_logo.png" />
-					</a>
-					<a href="http://portals.apache.org">
-						<img src="img/apache-portals.gif" />
-					</a>
-					<a href="http://www.eclipse.org/birt/">
-						<img src="img/birt-logo.png" />
-					</a>
+				</article>
+				</section>    
+
+
+				<section>
+				<div id="thirdparty" style="width: 100%; ">
+					<div> 
+						<a href="https://www.kernel.org" target="_blank" >
+							<img src="img/tux.png"  />
+						</a>
+					</div>
+					<div> 
+						<a href="http://tomcat.apache.org"  target="_blank" >
+							<img src="img/tomcat.png" />
+						</a>
+					</div>
+					<div> 
+						<a href="http://lucene.apache.org/solr/"  target="_blank" >
+							<img src="img/solr.png"  />
+						</a>
+					</div>
+					<div> 
+						<a href="http://spring.io"  target="_blank" >
+							<img src="img/springframework_logo.png" />
+						</a>
+					</div>
+					<div> 
+						<a href="http://portals.apache.org"  target="_blank" >
+							<img src="img/apache-portals.gif" />
+						</a>
+					</div>
+					<div> 
+						<a href="http://www.eclipse.org/birt/"  target="_blank" >
+							<img src="img/birt-logo.png" />
+						</a>
+
+					</div>
+					<div> 
+						<a href="http://maven.apache.org"  target="_blank" >
+							<img src="img/maven.png"  />
+						</a>
+					</div>
+					<div> 
+						<a href="http://hadoop.apache.org"  target="_blank">
+							<img src="img/hadoop.jpg" />
+						</a>
+					</div>
+					<!--
+					OpenJPA, OpenEJB, 
+					XALAN, 
+					-->
 				</div>
 
 			</section>      
 
 			<section id="contact-us">
-				<div style="margin:20px 0px;" >
+			<h2>Contact US</h2>
+			<div class="row">
+				<div style="margin:20px 0px; width: 49.99%; float:left; font-weight: bold; line-height: 150%; " >
+					<p>
 					CityNix
-					<br />
+					</p>
+					<p>
 					2446 Bank Street
-					<br />
+					</p>
+					<p>
 					Suite # 642
-					<br />
+					</p>
+					<p>
 					Ottawa, Ontario, K1V 1A8
-					<br />
+					</p>
+					<p>
 					Canada
-					<br />
+					</p>
+					<p>
 					Phone: 613-793-5225
-					<br />
+					</p>
 				</div>
 
-				    <div id="map_canvas"></div>
+				<div id="map_canvas" style="float:left; margin: 20px;" />
+				</div>
 
 				<form id="contact" action="http://getsimpleform.com/messages?form_api_token=d0464946b37d17df490212667452dbbe" method="post">
 
@@ -332,7 +462,7 @@
 					<input type="submit" value="Submit" />
 				</form>
 			</section>
-		</div>
+			</div>
 
 
 		<footer>
@@ -340,7 +470,9 @@
 		</footer>
 
 
+	
 	</body>
+
 </html>
 
 
