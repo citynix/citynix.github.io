@@ -1,0 +1,543 @@
+<html>
+<head>
+	<title> CityNix </title>
+
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0 , user-scalable=no" />
+
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/fonts.css" rel="stylesheet" type="text/css" />
+	<link href="slick/slick.css" rel="stylesheet" />
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
+
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/gmaps.js"></script>
+	<!-- bxSlider CSS file -->
+
+	<script src="slick/slick.min.js"></script>
+
+	<script> 
+		/*			*/
+		function initialize() {
+			var map_canvas = document.getElementById('map_canvas');
+			var myLocation = new google.maps.LatLng( 45.35263, -75.64687) ; 
+			var map_options = {
+				center: myLocation ,
+				zoom: 15,
+				//mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+
+			var map = new google.maps.Map(map_canvas, map_options)
+			var marker = new google.maps.Marker({
+				position: myLocation ,
+				map: map,
+				title: 'CityNix'
+			});
+
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+				$('#slides').bxSlider(
+					{
+auto: true ,
+infiniteLoop: true ,
+autoControls: false ,
+pager: true,
+
+					
+					} ) ;
+
+				$('#thirdparty').bxSlider({
+auto: true,
+infiniteLoop: true,
+autoControls: false,
+pager: false ,
+pause: 2500,
+minSlides : 5 ,
+maxSlides : 5 ,
+moveSlides: 1,
+slideWidth: 200, 
+slideMargin: 10,
+});
+				});
+
+</script>
+
+<style>
+
+body {
+	background-color: ;
+}
+
+div#wrap {
+	width: 960px;
+	margin-left: auto; 
+	margin-right: auto;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header { }
+
+body  section {
+	width: 100%;
+	margin-left: auto; 
+	margin-right: auto;
+	margin: 20px auto; 
+	float: left;
+}
+
+div.row {
+	margin-bottom: 15px;
+	float: left;
+	width:100%;
+	margin: 0px 0px 5% 0px;
+}
+
+body  section div.row  article {
+	float: left;
+	width: 47.4999%;
+	font-size: 14px;
+}
+
+body section div.row  article:first-child {
+	margin-right: 5%;
+}
+
+body section div.row  article div{
+	width: 89.99%;
+	float: right;
+}
+
+
+body section div.row  article div h3.coming-soon {
+	height: 50px ;
+	background: url("img/coming-soon.jpg") right no-repeat;
+	background-size: 50px ;
+}
+
+body section div.row  article div h3 {
+	height: 30px ;
+	font-size: 16px;
+	font-weight: bold;
+	width: 100% ;
+	float: left;
+}
+
+body section  h2 {
+	margin : 10px 0px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+header h1 {
+color: #E56038;
+font-family: 'Baumans', cursive;
+font-size: 55px;
+margin: 35px 0 0;
+}
+
+header ul, header ul li {
+float: right;
+background-color: #EEE;
+vertical-align: bottom;
+}
+
+header ul li a {
+text-decoration: none;
+color: #E56038;
+}
+
+header ul li a:hover {
+
+}
+
+nav ul {
+list-style:none;
+}
+
+nav ul li {
+display:block;
+float:left;
+padding:3px 15px;
+}
+
+nav header ul li a {
+font-family: 'Open Sans', sans-serif;
+text-transform:uppercase;
+transition: all .25s ease;
+}
+
+nav ul li a:hover {
+color:#E56038;
+}
+
+img.icon  {
+float: left;
+max-width: 8% ;
+
+}
+
+footer {
+position:relative;
+width:100%;
+clear:both;
+width:auto;
+height:150px;
+bottom: 0px;
+background-color: #3366FF ;
+background:#333333;
+}
+
+ul#thirdparty {
+}
+
+ul#thirdparty li{
+height: 120px ; 
+list-style-type : none ;
+}
+
+#thirdparty li a {
+display: block ;
+text-decoration: none ;
+}
+
+#thirdparty li a img {
+background-color: ;
+position: absolute ;
+bottom: 0px ;
+width: auto;
+}
+
+form#contact {
+width: 100% ;
+margin: 30px 0px;
+}
+
+form#contact label {
+width: 25%; 
+display: inline-block;
+font-weight: bold ;
+float:left ;
+}
+
+form#contact input[type="text"]{
+width: 35%; 
+display: inline-block;
+}
+
+div#map_canvas {
+width: 40%;
+height: 40%;
+}
+
+.slick-prev:before , .slick-next:before {
+color: orange; 
+}
+
+#islides {
+	display: block ;
+	width : 960px ;
+	margin-left : auto; 
+	margin-right : auto;
+}
+
+#slides img {
+	width: 100% ;
+	height: 300px ;
+	}
+
+	@media (max-width: 400px) {
+
+		section div.row  article {
+		width: 99.99% ;
+		display: block ;
+		}
+	}
+
+	.bx-controls-direction a {
+		    display: none;
+	    }
+
+	    .bx-wrapper:hover .bx-controls-direction a { }
+</style>
+</head>
+
+<body id="top">
+
+	<header> 
+	<h1 style="float:left;  margin: 5px;">
+		<font style="color:#E56038">CITY</font><font style="color: #3366FF">NIX</font>
+	</h1>
+	<!-- <img style="width: 200px; margin: 10px; float:left;" src="img/citynix.png" />  -->
+	<nav>
+	<ul style="float:right;">
+		<li><a href="#services">Services</a></li>
+		<li><a href="#why-us">Why Us</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+	</nav>
+	<img style="width: 100%;" src="img/lines.png" />
+	</header>
+	<!--
+	-->
+
+	<div id="wrap" >
+
+	<ul id="slides" >
+		<li><img src="img/slide-1.jpg" /></li>
+		<li><img src="img/slide-2.jpg" /></li>
+		<li><img src="img/slide-3.jpg" /></li>
+	</ul>
+		<section id="services">
+		<h2>Our Services</h2>
+		<div class="row">
+			<article>
+			<img class="icon" src="img/icons/reporting.png" />
+			<div>
+				<h3>BI Reports</h3>
+				<p>
+				You are looking to eliminate guess work,  identify cross-selling and up-selling opportunities, improve the effeciency, get faster answers to your business questions ?
+				Yes? Then you are in right place.
+				</p>
+			</div>
+			</article>	
+
+			<article class="service">
+			<img class="icon" src="img/icons/Folder-Searches.png" />
+			<div>
+				<h3>Content Search Engines</h3>
+				<p>
+				You are having difficulties locating the peice of information in your huge amount of digital asset ? 
+				May be you want to bundle the access to your digital content with a smart search functionality. 
+				Your content is semi-structured, and in multiple format. 
+				</p>
+				<p>
+				Sure we can help !
+				</p>
+			</div>
+			</article>
+		</div>
+		<div class="row">
+			<article> 
+			<img class="icon" src="img/icons/PDF.png" />
+			<div>
+				<h3>Publishing</h3>
+				<p>
+				Your data is in specific format, and you want it produced in a different format ?? May be for multi channel publishing ?? 
+				Sure we can help !
+				</p>
+			</div>
+			</article>
+			<article>
+			<img class="icon" src="img/icons/linux.png" />
+			<div>
+				<h3>Linux Consulting</h3>
+				<p>
+				Whether you are looking for help with Redhat Enterprise linux consulting, or looking for support for your team using Ubuntu for the first time, our 
+				team can help.  With experience using a variety of linux distributions, CityNix can help you or your company make the switch to linux or 
+				help with any linux changes that might be necessary and provide you the support to smooth over any transitions.  
+				</p>
+			</div>
+			</article>
+		</div>
+
+		<div class="row" >
+
+			<article>
+			<img class="icon" src="img/icons/Calculater.png"  />
+			<div>
+				<h3 class="coming-soon">Enterprise Resource Planning</h3>
+				<p>
+				ERPs offer:
+				<ul>
+					<li>
+					complete visibility of your orginazation. 
+					</li>
+					<li>
+					Automatic workflow
+					</li>
+					<li>
+					E-commerce integration. 
+					</li>
+					<li>
+					Better collaboration.
+					</li>
+				</ul>
+				</p>
+			</div>
+			</article>	
+			<!--
+			<article>
+			<img class="icon" src="img/icons/data_protection.png" />
+			<div>
+				<h3 class="coming-soon">data backup</h3>
+				<p>
+				your most important asset - your corporate data - is far too valuable
+				to entrust to cumbersome tape processes, unreliable backup media, and
+				painstakingly slow recoveries. small and medium-sized businesses
+				(smbs) are rapidly turning to online backup and recovery to displace
+				older, manual, less reliable tape backup. in fact, a staggering 76.5%
+				of it professionals plan to change the way they do backup over the
+				next 18 months. 
+				</p>
+				<p>
+				online backup promises to address the challenges posed by traditional
+				tape backup solutions. this white paper explores why today's smbs use
+				online backup and recovery to protect their sql database, exchange,
+				application and file servers. learn the top ten reasons why smbs are
+				embracing online backup and recovery to protect server data including
+				automatic, continuous data protection (cdp), secure offsite storage,
+				and data encryption for reliable server backup and disaster recovery.
+				<a class="readmore" 
+					href="http://www.techrepublic.com/whitepapers/top-10-reasons-why-online-backup-is-replacing-tape/162691">
+					Read More: Top 10 Reasons Why Online Backup Is Replacing Tape
+				</a> 
+				</p>
+			</div>
+			</article>
+			-->
+		</div>
+		</section>
+
+
+		<section id="why-us">
+		<h2> Why us </h2>
+		<article>
+		<p>
+		We are supportive, we don't ask countless questions. We use our expereince to propose and recommend solutions.
+		</p>
+		</article>
+		<article>
+		<p>
+		We deliver on time. We hire only project managers with military background, so we know what a deadline really means.
+		</p>
+		</article>
+		<article>
+		<p>
+		Competitive prices, with un matched quality.
+		</p>	
+		</article>
+		<article>
+
+		<p>
+		We utilize and support the most reliable technologies in our products. This gives our clients the freedom to choose their software provider. 
+		Our clients will be given the source code under the business friendly ASL. 
+		</p>
+		</article>
+		</section>    
+
+
+		<section>
+
+		<ul id="thirdparty" >
+			<li> 
+			<a href="https://www.kernel.org" target="_blank" ><img src="img/logos/tux.png"  /></a>
+			</li>
+			<li> 
+			<a href="http://tomcat.apache.org"  target="_blank" ><img src="img/logos/tomcat.png" /></a>
+			</li>
+			<li> 
+			<a href="http://lucene.apache.org/solr/"  target="_blank" ><img src="img/logos/solr.png"  /></a>
+			</li>
+			<li> 
+			<a href="http://spring.io"  target="_blank" >
+				<img src="img/logos/springframework.png" />
+			</a>
+			</li>
+			<li> 
+			<a href="http://portals.apache.org"  target="_blank" >
+				<img src="img/logos/apache-portals.gif" />
+			</a>
+			</li>
+			<li> 
+			<a href="http://www.eclipse.org/birt/"  target="_blank" >
+				<img src="img/logos/birt.png" />
+			</a>
+
+			</li>
+			<li> 
+			<a href="http://hadoop.apache.org"  target="_blank">
+				<img src="img/logos/hadoop.jpg" />
+			</a>
+			</li>
+			<!-- OpenJPA, OpenEJB, XALAN, -->
+
+			<li> 
+			<a href="http://postgresql.org"  target="_blank" >
+				<img src="img/logos/postgresql.png"  />
+			</a>
+			</li>
+			<li> 
+			<a href="http://maven.apache.org"  target="_blank" >
+				<img src="img/logos/maven.png"  />
+			</a>
+			</li>
+		</ul>
+
+		</section>      
+
+		<section id="contact-us">
+		<h2>Contact US</h2>
+		<div class="row">
+			<div style="margin:20px 0px; width: 49.99%; float:left; font-weight: bold; line-height: 150%; " >
+				<p>
+				CityNix
+				</p>
+				<p>
+				2446 Bank Street
+				</p>
+				<p>
+				Suite # 642
+				</p>
+				<p>
+				Ottawa, Ontario, K1V 1A8
+				</p>
+				<p>
+				Canada
+				</p>
+				<p>
+				Phone: 613-793-5225
+				</p>
+			</div>
+
+			<div id="map_canvas" />
+			</div>
+
+			<form id="contact" action="http://getsimpleform.com/messages?form_api_token=d0464946b37d17df490212667452dbbe" method="post">
+
+				<input type="hidden" name="redirect_to" value="http://citynix.com" />
+
+				<label for="name" >Name:</label>
+				<input type="text" name="name" placeholder=""  />
+				<br />
+
+				<label for="name">Email:</label>
+				<input type="text" name="reply_email" />
+				<br />
+
+				<label for="name">Message:</label>
+				<textarea name="message" style="width: 35%; height:6em;" ></textarea>
+				<br />
+
+				<input type="submit" value="Submit" />
+			</form>
+			</section>
+		</div>
+
+
+		<footer>
+			<p style="padding: 40px; text-align:center; color: white;" >Copyrights 2011-2014</p>
+		</footer>
+
+
+
+	</body>
+
+</html>
+
+
